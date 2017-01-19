@@ -166,16 +166,17 @@ var pizzaElementGenerator = function(i) {
 var resizePizzas = function(size) {
     window.performance.mark("mark_start_resize");
 
+    var pizzasize =  document.querySelector("#pizzaSize");
     function changeSliderLabel(size) {
         switch (size) {
             case "1":
-                document.querySelector("#pizzaSize").innerHTML = "Small";
+                pizzasize.innerHTML = "Small";
                 return;
             case "2":
-                document.querySelector("#pizzaSize").innerHTML = "Medium";
+                pizzasize.innerHTML = "Medium";
                 return;
             case "3":
-                document.querySelector("#pizzaSize").innerHTML = "Large";
+                pizzasize.innerHTML = "Large";
                 return;
             default:
                 console.log("bug in changeSliderLabel");
